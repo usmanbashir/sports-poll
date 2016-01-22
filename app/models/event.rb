@@ -1,6 +1,9 @@
 class Event
   include Mongoid::Document
   include Mongoid::Timestamps
+
+  # Relations
+  has_one :poll,        dependent: :restrict
   
   # Fields
   field :objectId,      type: String
