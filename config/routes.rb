@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'polls' => 'polls#index'
+  get 'polls/:id' => 'polls#show'
+  post 'polls/:id/vote' => 'polls#vote'
+
   get 'events' => 'events#index'
   get 'events/:objectId' => 'events#show'
 
