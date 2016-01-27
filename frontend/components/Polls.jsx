@@ -50,7 +50,9 @@ export default class Polls extends React.Component {
 
   render() {
     return(
+      <div className="polls">
         <PollsList polls={this.state.pollsList} />
+      </div>
     );
   }
 }

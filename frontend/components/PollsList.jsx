@@ -7,10 +7,8 @@ export default class PollsList extends React.Component {
     let polls = this.props.polls.map(poll => <Poll key={poll.id} {...poll} />);
 
     return(
-      <div>
-        <ul className="collection">
-          {polls}
-        </ul>
+      <div className="polls-list">
+        {polls}
       </div>
     );
   }
