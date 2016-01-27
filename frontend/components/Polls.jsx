@@ -16,7 +16,7 @@ let getState = () => {
         event: {
           id:             1002916450,
           home_team:      "Chania FC",
-          home_team_logo: "assets/images/events/chania_fc.jpg",
+          home_team_logo: "assets/images/events/chania_fc.png",
           away_team:      "Panthrakikos Komotini",
           away_team_logo: "assets/images/events/panthrakikos_komotini.png",
           group:          "Greek Cup"

@@ -9,12 +9,24 @@ class Poll
 
   # Default Scopes
 
-  default_scope -> { order(created_at: :desc) }
+  default_scope -> { order(created_at: :asc) }
 
 
   # JSON Fields
   def as_json(options={})
-    super(methods: [:votes_total, :away_team, :draw, :home_team])
+    {
+      id: id, votes_total: votes_total,
+      away_team: away_team, darw: draw, 
+      home_team: home_team, created_at: created_at,
+      event: {
+        id: event.id,
+        home_team: event.home_name,
+        home_team_logo: event.home_team_logo,
+        away_team: event.away_name,
+        away_team_logo: event.away_team_logo,
+        group: event.group
+      }
+    }
   end
 
 

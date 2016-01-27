@@ -29,4 +29,14 @@ class Event
 
   validates :objectId, :away_name, :home_name, 
             :group, :state, :start, presence: true
+
+
+  # Methods
+
+  def home_team_logo
+    "assets/images/events/#{home_name.downcase.tr(" ", "_")}.png"
+  end
+  def away_team_logo
+    "assets/images/events/#{away_name.downcase.tr(" ", "_")}.png"
+  end
 end
