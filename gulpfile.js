@@ -25,35 +25,17 @@ var config = {
         libs:     ["./node_modules/materialize-css/sass/"]
       },
       fonts:      "./node_modules/materialize-css/font/**/*.{eot,ttf,woff,woff2,svg}",
+      images:     "./frontend/images/**/*.{png,jpg}"
     },
     dest: {
       root:       "./public/",
       index:      "./public/index.html",
       assets:     "./public/assets/",
-      fonts:      "./public/assets/fonts/"
+      fonts:      "./public/assets/fonts/",
+      images:     "./public/assets/images/"
     }
   }
 };
-
-
-// By default, setup watch and run a dev server to serve all static assets.
-gulp.task("default", 
-  [
-    "clean",
-    "webpack:watch",
-    "sass",
-    "fonts",
-    "html",
-    "connect",
-    "watch"
-  ]
-);
-
-
-// Build all assets as production ready.
-//
-// Note: A work in progress.
-gulp.task("build", ["html", "sass:production", "fonts", "webpack:build:production"]);
 
 
 gulp.task("clean", function() {
@@ -84,6 +66,12 @@ gulp.task("html", function() {
 gulp.task("fonts", function() {
   return gulp.src(config.paths.src.fonts)
              .pipe(gulp.dest(config.paths.dest.fonts));
+});
+
+
+gulp.task("images", function(){
+  return gulp.src(config.paths.src.images)
+             .pipe(gulp.dest(config.paths.dest.images));
 });
 
 
@@ -144,6 +132,27 @@ gulp.task("webpack:watch", function() {
 
   webpackBuild("webpack:watch", wpConfig, "watch");
 });
+
+
+// By default, setup watch and run a dev server to serve all static assets.
+gulp.task("default", 
+  [
+    "clean",
+    "webpack:watch",
+    "sass",
+    "fonts",
+    "images",
+    "html",
+    "connect",
+    "watch"
+  ]
+);
+
+
+// Build all assets as production ready.
+//
+// Note: A work in progress.
+gulp.task("build", ["html", "sass:production", "fonts", "images", "webpack:build:production"]);
 
 
 // Helpers
