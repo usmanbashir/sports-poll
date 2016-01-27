@@ -3,6 +3,8 @@ import cards from "materialize-css/js/cards";
 import waves from "materialize-css/js/waves";
 import buttons from "materialize-css/js/buttons";
 
+import Vote from "./PollVote";
+
 export default class Poll extends React.Component {
   render() {
     return(
@@ -35,7 +37,13 @@ export default class Poll extends React.Component {
             </div>
 
             <div className="card-action">
-              <button className="btn waves-effect waves-light">Vote</button>
+              <button className="btn activator waves-effect waves-light">Vote</button>
+            </div>
+
+            <div className="card-reveal">
+              <Vote id={this.props.id}
+                    home_team={this.props.event.home_team}
+                    away_team={this.props.event.away_team} />
             </div>
 
           </div>
