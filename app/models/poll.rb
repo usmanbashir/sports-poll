@@ -16,7 +16,7 @@ class Poll
   def as_json(options={})
     {
       id: id, votes_total: votes_total,
-      away_team: away_team, darw: draw, 
+      away_team: away_team, draw: draw,
       home_team: home_team, created_at: created_at,
       event: {
         id: event.id,
