@@ -6,6 +6,7 @@ import jQuery from "jquery";
 
 import App from "./components/App";
 import Polls from "./components/Polls";
+import About from "./components/About";
 
 let documentReady = () => {
   let appNode = document.getElementById("app");
@@ -17,6 +18,7 @@ let documentReady = () => {
       <Router history={history}>
         <Route path="/" component={App}>
           <IndexRoute component={Polls} />
+          <Route path="about" component={About} />
         </Route>
       </Router>
     , appNode);
