@@ -4,6 +4,7 @@ import waves from "materialize-css/js/waves";
 import buttons from "materialize-css/js/buttons";
 
 import Vote from "./PollVote";
+import Results from "./PollResults";
 
 export default class Poll extends React.Component {
   render() {
@@ -11,10 +12,7 @@ export default class Poll extends React.Component {
 
     if (this.props.taken.indexOf(this.props.poll.id) >= 0) {
       revealComponent = (
-        <span className="card-title grey-text text-darken-1">
-          Poll Results
-          <i className="right fa fa-times"></i>
-        </span>
+        <Results poll={this.props.poll} />
       );
     } else {
       revealComponent = (
