@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, Route, browserHistory } from "react-router";
+import { Router, Route, IndexRoute } from "react-router";
+import createHistory from "history/lib/createHashHistory";
 import jQuery from "jquery";
 
 import App from "./components/App";
@@ -9,11 +10,13 @@ import Polls from "./components/Polls";
 let documentReady = () => {
   let appNode = document.getElementById("app");
 
+  const history = createHistory({queryKey: false});
+
   if (appNode) {
     ReactDOM.render(
-      <Router history={browserHistory}>
-        <Route component={App}>
-          <Route path="/" component={Polls} />
+      <Router history={history}>
+        <Route path="/" component={App}>
+          <IndexRoute component={Polls} />
         </Route>
       </Router>
     , appNode);
