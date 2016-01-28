@@ -7,5 +7,11 @@ export default {
       actionType: ActionTypes.RECEIVED_POLLS,
       rawPolls
     });
+  },
+  receivedOneVote(rawVote) {
+    AppDispatcher.dispatch({
+      actionType: ActionTypes.RECEIVED_ONE_VOTE,
+      rawVote
+    });
   }
 }

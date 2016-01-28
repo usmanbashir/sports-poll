@@ -1,5 +1,7 @@
 import React from "react";
 
+import PollActions from "../actions/PollActions";
+
 let getState = () => {
   return {
     votingOptionSelected: false,
@@ -38,7 +40,10 @@ export default class PollVote extends React.Component {
   sendVote(e) {
     e.preventDefault();
 
-    console.log(`Your vote for ${this.props.id}:${this.state.voteChoice} has been sent!`);
+    PollActions.sendVote(this.props.id, this.state.voteChoice);
+
+    // TODO: Find a better way of updating the polls list.
+    PollActions.getAllPolls();
   }
 
   votingOption(name, label) {

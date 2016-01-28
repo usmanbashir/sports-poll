@@ -6,7 +6,10 @@ import PollStore from "../stores/PollStore";
 import PollActions from "../actions/PollActions";
 
 let getState = () => {
-  return { pollsList: PollStore.getAll() };
+  return { 
+    pollsList: PollStore.getAll(),
+    pollsTaken: PollStore.getAllVotedByCurrentUser()
+  };
 }
 
 export default class Polls extends React.Component {
@@ -32,7 +35,8 @@ export default class Polls extends React.Component {
   render() {
     return(
       <div className="polls">
-        <PollsList polls={this.state.pollsList} />
+        <PollsList polls={this.state.pollsList}
+                   pollsTaken={this.state.pollsTaken} />
       </div>
     );
   }

@@ -8,6 +8,11 @@ export default {
     jQuery.get(getAPIUrl("polls"))
           .success(rawPolls => ServerActions.receivedPolls(rawPolls))
           .error(error => console.log(error));
+  },
+  createPollVote(id, vote) {
+    jQuery.post(getAPIUrl(`polls/${id}/vote`), { answer: vote })
+          .success(rawVote => ServerActions.receivedOneVote(rawVote))
+          .error(error => console.log(error));
   }
 }
 
