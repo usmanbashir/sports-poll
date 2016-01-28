@@ -10,7 +10,9 @@ export default class App extends React.Component {
           <div className="nav-wrapper container">
             <Link to="/" className="brand-logo left">Sports Poll</Link>
             <ul id="nav-mobile" className="right">
-              <li><Link to="/about">About</Link></li>
+              <li className={this.props.history.isActive("about") ? "active" : ""}>
+                <Link to="/about" activeClassName="active">About</Link>
+              </li>
             </ul>
           </div>
         </nav>

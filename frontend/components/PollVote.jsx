@@ -71,7 +71,7 @@ export default class PollVote extends React.Component {
 
         <form onSubmit={this.sendVote.bind(this)}>
 
-          <ul className="voting-options">
+          <ul className="voting-options flow-text">
             {this.votingOption("home-team", this.props.home_team)}
             {this.votingOption("draw", "Draw")}
             {this.votingOption("away-team", this.props.away_team)}
