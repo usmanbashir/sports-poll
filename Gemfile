@@ -14,12 +14,15 @@ gem 'sass', '~> 3.4'
 gem 'puma'
 gem 'foreman'
 
-gem 'rails_12factor', group: :production
 gem 'rack-timeout'
 
 gem 'mongoid'
 
-gem 'newrelic_rpm', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'newrelic_rpm'
+  gem 'airbrake'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
