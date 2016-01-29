@@ -135,3 +135,11 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOLAB_URI'] %>
+      options:
+        max_retries: 30
+        timeout: 15
+        refresh_interval: 10
