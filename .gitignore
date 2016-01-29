@@ -12,9 +12,5 @@
 !/log/.keep
 /tmp
 node_modules/
-app/assets/javascripts/bundle.js
-app/assets/javascripts/bundle.js.map
 .gems
-public/index.html
-public/assets/
 .sass-cache/
