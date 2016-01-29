@@ -41,4 +41,4 @@ let documentReady = () => {
 })()
 
 
-$(documentReady);
+jQuery(documentReady);
