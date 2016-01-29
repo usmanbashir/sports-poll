@@ -41,7 +41,7 @@ Airbrake.configure do |c|
   # environments.
   # NOTE: This option *does not* work if you don't set the 'environment' option.
   # https://github.com/airbrake/airbrake-ruby#ignore_environments
-  c.ignore_environments = %w(test)
+  c.ignore_environments = %w(development test)
 end
 
 # If Airbrake doesn't send any expected exceptions, we suggest to uncomment the

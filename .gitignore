@@ -18,3 +18,4 @@ app/assets/javascripts/bundle.js.map
 public/index.html
 public/assets/
 .sass-cache/
+.env

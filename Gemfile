@@ -18,10 +18,10 @@ gem 'rack-timeout'
 
 gem 'mongoid'
 
+gem 'airbrake'
 group :production do
   gem 'rails_12factor'
   gem 'newrelic_rpm'
-  gem 'airbrake'
 end
 
 group :development, :test do
@@ -33,6 +33,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
   gem 'mongoid-rspec'
+
+  gem 'dotenv-rails'
 end
 
 group :development do
