@@ -5,6 +5,7 @@ import buttons from "materialize-css/js/buttons";
 
 import Vote from "./PollVote";
 import Results from "./PollResults";
+import Image from "./Image";
 
 export default class Poll extends React.Component {
   render() {
@@ -29,8 +30,8 @@ export default class Poll extends React.Component {
 
             <div className="card-title front container">
               <div className="row flow-text">
-                <div className="col s5 m5 center-align">
-                  <img className="responsive-img" src={this.props.poll.event.home_team_logo} />
+                <div className="col s5 m5 center-align team">
+                  <Image className="responsive-img" src={this.props.poll.event.home_team_logo} />
                   <span>{this.props.poll.event.home_team}</span>
                 </div>
 
@@ -38,8 +39,8 @@ export default class Poll extends React.Component {
                   <strong className="valign center-align">VS</strong>
                 </div>
 
-                <div className="col s5 m5 center-align">
-                  <img className="responsive-img" src={this.props.poll.event.away_team_logo} />
+                <div className="col s5 m5 center-align team">
+                  <Image className="responsive-img" src={this.props.poll.event.away_team_logo} />
                   <span>{this.props.poll.event.away_team}</span>
                 </div>
               </div>
