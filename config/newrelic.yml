@@ -13,6 +13,9 @@
 common: &default_settings
   # Required license key associated with your New Relic account.
   license_key: 1cfb7e289e8e683e0e1804527428237bef2fe96f
+  # After thinking about it. For this project, the key can remain public. I don't mind it.
+  #
+  # Source: https://discuss.newrelic.com/t/change-my-accounts-license-key/46643/2
 
   # Your application name. Renaming here affects where data displays in New
   # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications
