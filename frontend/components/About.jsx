@@ -9,15 +9,15 @@ export default class About extends React.Component {
           <div className="divider" />
 
           <p>
-            I took the concept of a Sports Poll website and tried to build a easy to use and simple experience around the whole thing. My goals for the project, which were numerous, included building a simple, functional and effective polling web app across various user devices.
+            I took the concept of a sports poll website and tried to build an easy to use and simple experience around the whole thing. My goals for the project, which were numerous, included building a simple, functional and effective polling web app that worked across various devices.
           </p>
           
           <p>
-            And, while doing so, learn and gain experience on new front-end tools and technologies like React, Flux, ES6, Gulp.js, Webpack, Node.js and friends. Which was a tall order from the get go, since until this project, I had only read about some of these but never actually used any of them before.
+            And, while doing so. Learn and gain experience on new front-end tools and technologies like **ReactJS**, **Flux**, **ES6**, **Gulp.js**, **Webpack**, **Node.js** and friends. Which was a tall order from the get go, since until this project. I had only read about most of these but never actually used any of them before.
           </p>
 
           <p>
-            Now admittedly, it was not easy to learn and pick up all these new tools simultaneously while developing a project, but other than Webpack and Gulp.js which were the most troublesome of the bunch. The rest, were relatively manageable.
+            Now admittedly, it was not easy to learn and pick up all these new tools simultaneously while developing a project. But, other than Webpack and Gulp.js, which were the most troublesome of the bunch. The rest, were relatively manageable.
           </p>
           
           <p>
@@ -29,7 +29,7 @@ export default class About extends React.Component {
           </p>
 
           <p>
-            I did got stuck on a few issues, which took some time to solve. But, they were all related to the Webpack and Gulp.js asset pipeline. Fortunately, there weren't any issues that caused much trouble and stop my progress while developing the web app, itself.
+            I did get stuck on a few issues, which took some time to solve. But, they were all related to the Webpack and Gulp.js asset pipeline. Fortunately, there weren't any issues that caused too much trouble and stopped my progress while developing the web app, itself.
           </p>
 
           <p>
@@ -37,13 +37,21 @@ export default class About extends React.Component {
           </p>
 
           <p>
-            Which, is fine. After all, <em>Sports Poll</em> is only meant to be a functioning proof, nothing more. And, it does its job admirably at that, and then some.
+            Which, is fine. Since after all, this project was only meant to be a proof of concept and nothing more. And, it does its job admirably at that, and then some.
+          </p>
+
+          <p>
+            Personally, working on this project was a blast. Having completed it using an unfamiliar tech stack was immensely exhilarating. Making it, worth all the hassle. In the end, it allowed me to learn so many new things and expand my toolset.
           </p>
 
           <div className="divider" />
 
           <p>
             Like what you see? Then why don't you say something? I'm listening and I'm on <a href="https://twitter.com/ubax">Twitter</a>.
+          </p>
+
+          <p>
+            Want to see the guts of this app? Go right ahead, and check out its source code on [GitHub](https://github.com/usmanbashir/sports-poll)!
           </p>
 
           <blockquote>
